@@ -1,0 +1,16 @@
+<%- include('partials/head')%>
+
+<h1 class="container mt-5">
+    Orders:
+</h1>
+
+<ul class="container">
+<% for(let cof of coffees) { %>
+    <li><p><strong><%=cof.drinker%></strong> - <%= cof.type%></p></li>
+    <a class="btn btn-success" href="/coffees/<%= cof.id %>">More Details</a>
+    <a class="btn btn-warning" href="/coffees/<%=cof.id%>/edit">Edit Order</a>  
+<% } %>
+    
+</ul>
+
+<%- include('partials/foot')%>

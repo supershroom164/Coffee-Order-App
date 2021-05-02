@@ -1,0 +1,16 @@
+<%- include('partials/head')%>
+
+<h1>New Order</h1>
+    <form method="POST" action="/coffees">
+        <label for="type">Type</label>
+        <input type="text" id="type" name="type" placeholder="Mocha Latte">
+        <label for="size">size</label>
+        <input type="text" id="size" name="size" placeholder="Large">
+        <label for="drinker">drinker</label>
+        <input type="text" id="drinker" name="drinker" placeholder="Jon Doe">
+        <label for="price">price</label>
+        <input type="number" id="price" name="price" placeholder="4">
+        <button class="btn btn-danger">Order</button>
+    </form>
+
+<%- include('partials/foot')%>

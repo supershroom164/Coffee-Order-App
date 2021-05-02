@@ -1,0 +1,11 @@
+<%- include('partials/head')%>
+
+<div class="container">
+    <h3 class="mt-4"><%= coffee.drinker%>'s Order:</h3>
+    <h2><%= coffee.type%> - <%= coffee.size%> ($<%= coffee.price%>)</h2>
+    <a class="btn btn-success" href="/coffees">Back</a>
+    <form style="display: inline;" method="POST" action="/coffees/<%=coffee.id%>?_method=DELETE">
+        <button class="btn btn-danger">Cancel Order</button>
+    </form>
+</div>
+<%- include('partials/foot')%>
